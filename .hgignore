@@ -1,0 +1,16 @@
+syntax: glob
+
+# Ignore Compiled Phyton Files
+*.pyc
+
+# Ignore Foler view files
+.DS_Store
+Desktop.ini
+
+# Ignore Thumbnail and cache files
+._*
+Thumbs.db
+
+# Spotlight files
+.Spotlight-V100
+.Trashes
