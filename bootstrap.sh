@@ -6,10 +6,11 @@ function doIt() {
 	rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" \
 		--exclude "README.md" --exclude "LICENSE-MIT.txt" --exclude "Brewfile" \
 		--exclude "Caskfile" -av --no-perms . ~
+	# Execute Bash Profile
 	source ~/.bash_profile
 
 	# Install all the Homebrew stuff :)
-	brew bundle Brewfile
+	brew bundle
 
 	# Install Cask Apps
 	./Caskfile

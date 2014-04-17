@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 # Update the Homebrew
 update
 
@@ -37,6 +35,23 @@ install zopfli
 install p7zip
 
 install homebrew/versions/lua52
+
+# Install Homebrew Cast
+brew install phinze/cask/brew-cask
+brew tap caskroom/versions
+
+brew cask install dropbox
+brew cask install firefox
+brew cask install google-chrome
+brew cask install google-chrome-canary
+brew cask install iterm2
+brew cask install macvim
+brew cask install virtualbox
+brew cask install vagrant
+brew cask install vlc
+brew cask install the-unarchiver
+brew cask install sequel-pro
+brew cask install skype
 
 # Remove outdated versions from the cellar
 cleanup
