@@ -4,7 +4,7 @@ update
 # Update the installed formula
 upgrade
 
-# Install GNU Core utilities
+# Install GNU Core utilities(Replaces BSD Coreutils with GNU Coreutils)
 # install coreutils
 # install moreutils
 # install findutils
@@ -18,7 +18,7 @@ install wget --enable-iri
 # Install a more recent version for VIM
 install vim --override-system-vi
 install homebrew/dupes/grep
-install josegonzalez/homebrew-php/php55
+#install josegonzalez/homebrew-php/php55
 
 install ack
 install pv
@@ -52,6 +52,9 @@ cask install vlc
 cask install the-unarchiver
 cask install sequel-pro
 cask install skype
+cask install android-file-transfer
+cask install evernote
+cask install sqlite-database-browser
 
 # Remove outdated versions from the cellar
 cleanup
