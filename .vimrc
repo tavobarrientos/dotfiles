@@ -25,3 +25,9 @@ inoremap <right>  <nop>
 syntax enable
 set background=dark
 colorscheme solarized
+
+set cursorline " Highlight current line
+set autoindent " Copy indent from last line
+set mouse=a " Enable Mouse
+set shell=/bin/sh " Set Bash to execute current shell commands
+set visualbell " Disable audible Alert
