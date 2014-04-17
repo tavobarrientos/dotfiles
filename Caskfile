@@ -1,18 +1,18 @@
+#!/usr/bin/env bash
+
 # Install Homebrew Cast
 brew install phinze/cask/brew-cask
 brew tap caskroom/versions
 
-function installcask() {
-	brew cask install "${@}" 2> /dev/null
-}
-
-installcask dropbox
-installcask firefox
-installcask google-chrome
-installcask google-chrome-canary
-installcask iterm2
-installcask macvim
-installcask virtualbox
-installcask vagrant
-installcask vlc
-installcask the-unarchiver
+brew cask install dropbox
+brew cask install firefox
+brew cask install google-chrome
+brew cask install google-chrome-canary
+brew cask install iterm2
+brew cask install macvim
+brew cask install virtualbox
+brew cask install vagrant
+brew cask install vlc
+brew cask install the-unarchiver
+brew cask install sequel-pro
+brew cask install skype

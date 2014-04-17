@@ -1,39 +1,42 @@
+#!/usr/bin/env bash
+
 # Update the Homebrew
-update
+brew update
 
 # Update the installed formula
-upgrade
+brew upgrade
 
 # Install GNU Core utilities
-install coreutils
-install moreutils
-install findutils
+# brew install coreutils
+# brew install moreutils
+# brew install findutils
+
 # Install Bash 4
-install bash
+# brew install bash
 
 # Install wget
-install wget --enable-iri
+brew install wget --enable-iri
 
 # Install a more recent version for VIM
-install vim --override-system-vi
-install homebrew/dupes/grep
-install josegonzalez/homebrew-php/php55
+brew install vim --override-system-vi
+brew install homebrew/dupes/grep
+brew install josegonzalez/homebrew-php/php55
 
-install ack
-install pv
-install git
-install imagemagick --with-wepp
-install lynx
-install node
-install pigz
-install rename
-install rhino
-install tree
-install webkit2png
-install zopfli
-install p7zip
+brew install ack
+brew install pv
+brew install git
+brew install imagemagick --with-wepp
+brew install lynx
+brew install node
+brew install pigz
+brew install rename
+brew install rhino
+brew install tree
+brew install webkit2png
+brew install zopfli
+brew install p7zip
 
-install homebrew/versions/lua52
+brew install homebrew/versions/lua52
 
 # Remove outdated versions from the cellar
-cleanup
+brew cleanup
