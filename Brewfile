@@ -37,21 +37,21 @@ install p7zip
 install homebrew/versions/lua52
 
 # Install Homebrew Cast
-brew install phinze/cask/brew-cask
-brew tap caskroom/versions
+install phinze/cask/brew-cask
+tap caskroom/versions
 
-brew cask install dropbox
-brew cask install firefox
-brew cask install google-chrome
-brew cask install google-chrome-canary
-brew cask install iterm2
-brew cask install macvim
-brew cask install virtualbox
-brew cask install vagrant
-brew cask install vlc
-brew cask install the-unarchiver
-brew cask install sequel-pro
-brew cask install skype
+cask install dropbox
+cask install firefox
+cask install google-chrome
+cask install google-chrome-canary
+cask install iterm2
+cask install macvim
+cask install virtualbox
+cask install vagrant
+cask install vlc
+cask install the-unarchiver
+cask install sequel-pro
+cask install skype
 
 # Remove outdated versions from the cellar
 cleanup
