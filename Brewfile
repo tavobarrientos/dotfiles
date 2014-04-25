@@ -5,20 +5,31 @@ update
 upgrade
 
 # Install GNU Core utilities(Replaces BSD Coreutils with GNU Coreutils)
-# install coreutils
-# install moreutils
-# install findutils
+install coreutils
+install moreutils
+install findutils
 
 # Install Bash 4
-# install bash
+install bash
 
 # Install wget
 install wget --enable-iri
 
-# Install a more recent version for VIM
-install vim --override-system-vi
+# Install MacVim
+install macvim --override-system-vi
 install homebrew/dupes/grep
-#install josegonzalez/homebrew-php/php55
+
+# PHP 5.5
+tap homebrew/php
+tap homebrew/dupes
+
+install php55 
+install php55-xdebug
+
+# PHP Laravel
+install composer
+install php55-mcrypt
+
 
 install ack
 install pv
@@ -45,7 +56,6 @@ cask install firefox
 cask install google-chrome
 cask install google-chrome-canary
 cask install iterm2
-cask install macvim
 cask install virtualbox
 cask install vagrant
 cask install vlc

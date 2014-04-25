@@ -3,6 +3,7 @@ runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
+filetype indent on
 
 " Set Line Numbers
 set number
@@ -18,6 +19,10 @@ colorscheme solarized
 
 set cursorline " Highlight current line
 set autoindent " Copy indent from last line
+set smartindent " Smart indent
+set expandtab
+set tabstop=4
+set shiftwidth=4
 set mouse=a " Enable Mouse
 set shell=/bin/sh " Set Bash to execute current shell commands
 set visualbell " Disable audible Alert

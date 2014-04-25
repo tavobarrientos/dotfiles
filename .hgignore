@@ -1,5 +1,3 @@
-syntax: glob
-
 # Ignore Compiled Phyton Files
 *.pyc
 
