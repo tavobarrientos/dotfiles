@@ -26,3 +26,8 @@ set shiftwidth=4
 set mouse=a " Enable Mouse
 set shell=/bin/sh " Set Bash to execute current shell commands
 set visualbell " Disable audible Alert
+
+set laststatus=2
+let g:NERDTreeDirArrows=0
+
+syn on

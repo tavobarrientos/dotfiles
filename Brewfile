@@ -1,70 +1,79 @@
 # Update the Homebrew
-update
+brew update
 
 # Update the installed formula
-upgrade
+brew upgrade
 
 # Install GNU Core utilities(Replaces BSD Coreutils with GNU Coreutils)
-install coreutils
-install moreutils
-install findutils
+brew install coreutils
+brew install moreutils
+brew install findutils
+
+echo 'export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"' >> ~/.zshrc
+export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
 
 # Install Bash 4
-install bash
+brew install bash
+
+# Install VIM
+brew install vim
+
+# Instal rbEnv
+# brew install rbenv ruby-build
+echo 'if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi' >> ~/.zshrc
+
+# rbenv install 2.2.2
+# rbenv global 2.2.2
 
 # Install wget
-install wget --enable-iri
-
-# Install MacVim
-install macvim --override-system-vi
-install homebrew/dupes/grep
+brew install wget --enable-iri
 
 # PHP 5.5
-tap homebrew/php
-tap homebrew/dupes
+brew tap homebrew/php
+brew tap homebrew/dupes
 
-install php55 
-install php55-xdebug
+brew install php55 
+brew install php55-xdebug
 
 # PHP Laravel
-install composer
-install php55-mcrypt
+brew install composer
+brew install php55-mcrypt
 
+brew install ack
+brew install pv
+brew install git
+brew install imagemagick --with-wepp
+brew install lynx
+brew install node
+brew install pigz
+brew install rename
+brew install rhino
+brew install tree
+brew install webkit2png
+brew install zopfli
+brew install p7zip
 
-install ack
-install pv
-install git
-install imagemagick --with-wepp
-install lynx
-install node
-install pigz
-install rename
-install rhino
-install tree
-install webkit2png
-install zopfli
-install p7zip
+brew install homebrew/versions/lua52
 
-install homebrew/versions/lua52
+# Install Homebrew Cask
+brew install phinze/cask/brew-cask
+brew tap caskroom/versions
 
-# Install Homebrew Cast
-install phinze/cask/brew-cask
-tap caskroom/versions
-
-cask install dropbox
-cask install firefox
-cask install google-chrome
-cask install google-chrome-canary
-cask install iterm2
-cask install virtualbox
-cask install vagrant
-cask install vlc
-cask install the-unarchiver
-cask install sequel-pro
-cask install skype
-cask install android-file-transfer
-cask install evernote
-cask install sqlite-database-browser
+brew cask install dropbox
+brew cask install firefox
+brew cask install google-chrome
+brew cask install google-chrome-canary
+brew cask install iterm2
+brew cask install virtualbox
+brew cask install vagrant
+brew cask install vlc
+brew cask install the-unarchiver
+brew cask install sequel-pro
+brew cask install skype
+brew cask install android-file-transfer
+brew cask install evernote
+brew cask install sqlite-database-browser
+brew cask install spotify
 
 # Remove outdated versions from the cellar
-cleanup
+brew cleanup
