@@ -3,10 +3,6 @@ cd "$(dirname "${BASH_SOURCE}")"
 # git pull origin master
 
 function doIt() {
-	rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" \
-		--exclude "README.md" --exclude "LICENSE-MIT.txt" --exclude "Brewfile" \
-		-av --no-perms . ~
-	
 	# Install Oh my zsh
 	printf "Instaling Oh-my-Zsh"
 	curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
@@ -39,13 +35,19 @@ function doIt() {
 		sh Brewfile
 		# OSX Tweaks
 		source ~/.osx
-	else
-		printf "Linux!!!"
 	fi
 	
 	# Execute Bash Profile
 	source ~/.bash_profile
 	source ~/.zshrc
+	
+	# Copy the dotfiles to Home Directory
+	rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" \
+		--exclude "README.md" --exclude "LICENSE-MIT.txt" --exclude "Brewfile" \
+		-av --no-perms . ~
+	
+	# Clone Submodules
+	git submodule update
 }
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
 	doIt

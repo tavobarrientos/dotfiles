@@ -53,27 +53,33 @@ brew install webkit2png
 brew install zopfli
 brew install p7zip
 
-brew install homebrew/versions/lua52
+# Tmux
+brew install tmux
+brew install reattach-to-user-namespace
 
 # Install Homebrew Cask
 brew install phinze/cask/brew-cask
 brew tap caskroom/versions
 
-brew cask install dropbox
-brew cask install firefox
-brew cask install google-chrome
-brew cask install google-chrome-canary
-brew cask install iterm2
-brew cask install virtualbox
-brew cask install vagrant
-brew cask install vlc
-brew cask install the-unarchiver
-brew cask install sequel-pro
-brew cask install skype
-brew cask install android-file-transfer
-brew cask install evernote
-brew cask install sqlite-database-browser
-brew cask install spotify
+apps=(
+dropbox
+firefox
+google-chrome
+google-chrome-canary
+iterm2
+virtualbox
+vagrant
+vlc
+the-unarchiver
+sequel-pro
+skype
+android-file-transfer
+evernote
+sqlite-database-browser
+spotify
+)
+
+brew cask install ${apps[@]}
 
 # Remove outdated versions from the cellar
 brew cleanup
